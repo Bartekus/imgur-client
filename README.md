@@ -6,7 +6,7 @@ imgur-client using react react-router reflux and gulp workflow.
 #### Screenshot
 
 ![Screenshot software](https://raw.githubusercontent.com/Bartekus/imgur-client/master/imgur-client.png "screenshot software")
-                       
+
 ## Synopsis
 
 Full feature imgur client app
@@ -76,6 +76,7 @@ Basic imgur client...
 
 ## History
 
+0.0.3 Refactored to keep code DRY
 0.0.2 Basic Functionality Completed
 0.0.1 First Commit - Basic Structure
 
