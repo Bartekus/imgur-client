@@ -76,6 +76,7 @@ Basic imgur client...
 
 ## History
 
+0.0.4 Added store and mixins/ Ongoing refactoring
 0.0.3 Refactored to keep code DRY
 0.0.2 Basic Functionality Completed
 0.0.1 First Commit - Basic Structure
