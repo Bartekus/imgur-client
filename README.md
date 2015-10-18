@@ -1,42 +1,54 @@
 imgur-client
 ======
 
-imgur-client using (**react-router**) combo and gulp workflow.
+imgur-client using react react-router reflux and gulp workflow.
 
 #### Screenshot
 
-![Screenshot software](https://raw.githubusercontent.com/Bartekus/todo-react-router/master/todo-react-router.png "screenshot software")
+![Screenshot software](https://raw.githubusercontent.com/Bartekus/todo-react-router/master/imgur-client.png "screenshot software")
 
 ## Synopsis
 
-Full feature todo list app with persistent data using react-router combo and firebase backend.
+Full feature imgur client app
 
 ## Code Example
 
 ```
-
+getInitialState: function() {
+  return {
+    topics: []
+  }
+},
 ```
 
 ## Motivation
 
-Practical look at React-router and flux implementation
+Practical look at React-router combo and reflux patern implementation
 
 ### Directory Layout
 
 ```
 .
-├── /node_modules        # Dependancies source
-├── /sass/               # SASS/SCSS folder
-│   └── /style.scss      # SASS/SCSS stylesheet
-├── /src/                # Source folder
-│   ├── /app.js          # App's main loop source
-├── .gitignore           # Version control omission file
-├── gulpfile.js          # Gulp control file
-├── index.html           # Main entry point
-├── main.js              # Main App
-├── package.json         # Dependencies management file
-├── README.md            # This file
-└── imgur-client.png     # Picture
+├── /.git/                       # Git's hidden repo
+├── /node_modules/               # Dependancies source
+├── /sass/                       # SASS/SCSS folder
+│   └── /style.scss              # SASS/SCSS stylesheet
+├── /src/                        # Source folder
+│   ├── /components/             # Components source folder
+│   │   ├── /header.jsx          # Header component source
+│   │   ├── /main.jsx            # App's main loop source
+│   │   └── /topic-list.jsx      # Topic-list component source
+│   ├── /utils/                  # Utilities source folder
+│   │   └── /api.jsx             # Api for interaction with imgur
+│   ├── /app.js                  # App's main loop source
+│   └── /routes.jsx              # Router endpoint library
+├── .gitignore                   # Version control omission file
+├── gulpfile.js                  # Gulp control file
+├── index.html                   # Main entry point
+├── main.js                      # Main App
+├── package.json                 # Dependencies management file
+├── README.md                    # This file
+└── imgur-client.png             # Picture
 ```
 
 ## Installation
@@ -64,6 +76,7 @@ Basic imgur client...
 
 ## History
 
+0.0.2 Basic Functionality Completed
 0.0.1 First Commit - Basic Structure
 
 ## Tests
