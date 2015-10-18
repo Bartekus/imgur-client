@@ -32,14 +32,19 @@ Practical look at React-router combo and reflux patern implementation
 ├── /.git/                       # Git's hidden repo
 ├── /node_modules/               # Dependancies source
 ├── /sass/                       # SASS/SCSS folder
-│   └── /style.scss              # SASS/SCSS stylesheet
+│   ├── /header.scss             # SASS/SCSS header stylesheet
+│   └── /style.scss              # SASS/SCSS main stylesheet
 ├── /src/                        # Source folder
 │   ├── /components/             # Components source folder
 │   │   ├── /header.jsx          # Header component source
 │   │   ├── /main.jsx            # App's main loop source
 │   │   └── /topic-list.jsx      # Topic-list component source
+│   ├── /stores/                 # Store's source folder
+│   │   ├── /image-store.jsx     # Image Data Sore
+│   │   └── /topic-store.jsx     # Topic Data Store
 │   ├── /utils/                  # Utilities source folder
 │   │   └── /api.jsx             # Api for interaction with imgur
+│   ├── /actions.js              # Actions file
 │   ├── /app.js                  # App's main loop source
 │   └── /routes.jsx              # Router endpoint library
 ├── .gitignore                   # Version control omission file
@@ -48,7 +53,8 @@ Practical look at React-router combo and reflux patern implementation
 ├── main.js                      # Main App
 ├── package.json                 # Dependencies management file
 ├── README.md                    # This file
-└── imgur-client.png             # Picture
+├── imgur-client.png             # Picture
+└── style.css                    # App's Main stylesheet
 ```
 
 ## Installation
@@ -76,6 +82,7 @@ Basic imgur client...
 
 ## History
 
+0.2.0 Fixed Rendering & Routing / Added another store for images / topic component adjusted  
 0.1.1 Refactored header, Added matching parameters to routing / adjusted look of the content
 0.1.0 Refactoring to reflux flow patter completed / Actions along with reflex listenables have been added as well
 0.0.4 Added store and mixins/ Ongoing refactoring
