@@ -76,6 +76,7 @@ Basic imgur client...
 
 ## History
 
+0.1.0 Refactoring to reflux flow patter completed / Actions along with reflex listenables have been added as well
 0.0.4 Added store and mixins/ Ongoing refactoring
 0.0.3 Refactored to keep code DRY
 0.0.2 Basic Functionality Completed
