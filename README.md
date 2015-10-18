@@ -5,8 +5,8 @@ imgur-client using react react-router reflux and gulp workflow.
 
 #### Screenshot
 
-![Screenshot software](https://raw.githubusercontent.com/Bartekus/todo-react-router/master/imgur-client.png "screenshot software")
-
+![Screenshot software](https://raw.githubusercontent.com/Bartekus/imgur-client/master/imgur-client.png "screenshot software")
+                       
 ## Synopsis
 
 Full feature imgur client app
