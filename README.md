@@ -82,6 +82,7 @@ Basic imgur client...
 
 ## History
 
+0.2.1 Refactored image-preview / added styles and basic hover functionality (autoplay & stats overlay)
 0.2.0 Fixed Rendering & Routing / Added another store for images / topic component adjusted  
 0.1.1 Refactored header, Added matching parameters to routing / adjusted look of the content
 0.1.0 Refactoring to reflux flow patter completed / Actions along with reflex listenables have been added as well
