@@ -14,11 +14,53 @@ Full feature imgur client app
 ## Code Example
 
 ```
-getInitialState: function() {
-  return {
-    topics: []
+module.exports = React.createClass({
+  mixins: [
+    Reflux.listenTo(ImageStore, 'onChange')
+  ],
+  getInitialState: function() {
+    return {
+      image: null
+    }
+  },
+  componentWillMount: function() {
+    Actions.getImage(this.props.params.id);
+  },
+  render: function() {
+    return <div className="image-detail">
+      {this.state.image ? this.renderContent() : null}
+    </div>
+  },
+  renderContent: function() {
+    return <div>
+      <div className="panel panel-default">
+        <div className="panel-heading">
+          <h4>{this.state.image.title}</h4>
+        </div>
+        <div className="panel-body">
+          {this.renderImage()}
+        </div>
+        <div className="panel-footer">
+          <h5>{this.state.image.description}</h5>
+        </div>
+      </div>
+    </div>
+  },
+  renderImage: function() {
+    if(this.state.image.animated) {
+      return <video preload="auto" autoPlay="autoplay" loop="loop" webkit-playsinline>
+        <source src={this.state.image.mp4} type="video/mp4"></source>
+      </video>
+    } else {
+      return <img src={this.state.image.link} />
+    }
+  },
+  onChange: function() {
+    this.setState({
+      image: ImageStore.find(this.props.params.id)
+    });
   }
-},
+});
 ```
 
 ## Motivation
@@ -33,14 +75,21 @@ Practical look at React-router combo and reflux patern implementation
 ├── /node_modules/               # Dependancies source
 ├── /sass/                       # SASS/SCSS folder
 │   ├── /header.scss             # SASS/SCSS header stylesheet
-│   └── /style.scss              # SASS/SCSS main stylesheet
+│   ├── /image-detail.scss       # SASS/SCSS single-image stylesheet
+│   ├── /image-preview.scss      # SASS/SCSS multiple-image stylesheet
+│   ├── /style.scss              # SASS/SCSS main stylesheet
+│   └── /topic.scss              # SASS/SCSS topic stylesheet
 ├── /src/                        # Source folder
 │   ├── /components/             # Components source folder
 │   │   ├── /header.jsx          # Header component source
+│   │   ├── /image-detail.jsx    # Image-single component source
+│   │   ├── /image-preview.jsx   # Image-multi component source
 │   │   ├── /main.jsx            # App's main loop source
-│   │   └── /topic-list.jsx      # Topic-list component source
+│   │   ├── /topic-list.jsx      # Topic-list component source
+│   │   └── /topic.jsx           # Topic component source
 │   ├── /stores/                 # Store's source folder
-│   │   ├── /image-store.jsx     # Image Data Sore
+│   │   ├── /comment-store.jsx   # Comment Data Store
+│   │   ├── /image-store.jsx     # Image Data Store
 │   │   └── /topic-store.jsx     # Topic Data Store
 │   ├── /utils/                  # Utilities source folder
 │   │   └── /api.jsx             # Api for interaction with imgur
@@ -82,6 +131,7 @@ Basic imgur client...
 
 ## History
 
+0.2.2 Added view for a single image item / refactored the image store / Adjusted the stylsheets to fix minor glitches
 0.2.1 Refactored image-preview / added styles and basic hover functionality (autoplay & stats overlay)
 0.2.0 Fixed Rendering & Routing / Added another store for images / topic component adjusted  
 0.1.1 Refactored header, Added matching parameters to routing / adjusted look of the content
