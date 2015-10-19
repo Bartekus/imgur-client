@@ -27,17 +27,26 @@
     opacity: .75;
     color: white; }
   .image-preview img {
-    height: 200px;
-    width: 200px;
+    height: 225px;
+    width: 225px;
     display: inline-block; }
   .image-preview video {
-    height: 200px;
-    width: 200px;
+    height: 225px;
+    width: 225px;
     vertical-align: middle;
     background-color: black; }
 
+.container {
+  display: block;
+  width: 73%;
+  margin: 0 auto;
+  padding: 0; }
+
+@media (max-width: 560px) {
+  .container {
+    width: 95%;
+    margin: 0 2.5% 0 2.5%;
+    padding: 0; } }
+
 .black {
   color: black; }
-
-.topic {
-  text-align: center; }

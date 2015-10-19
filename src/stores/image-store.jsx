@@ -11,6 +11,7 @@ module.exports = Reflux.createStore({
       this.images = _.reject(json.data, function(image) {
         return image.is_album
       });
+
       this.triggerChange();
     }.bind(this));
   },

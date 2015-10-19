@@ -119,7 +119,7 @@ Checkout this repo, install dependencies, then open index file with the followin
 
 ## Usage
 
-Basic imgur client...
+Basic imgur client that can be use as base for other api projects as well.
 
 ## Contributing
 
@@ -131,6 +131,7 @@ Basic imgur client...
 
 ## History
 
+0.3.0 Added comment store along with comment components / Minor adjustments to the CSS / Refactored again
 0.2.2 Added view for a single image item / refactored the image store / Adjusted the stylsheets to fix minor glitches
 0.2.1 Refactored image-preview / added styles and basic hover functionality (autoplay & stats overlay)
 0.2.0 Fixed Rendering & Routing / Added another store for images / topic component adjusted  
